@@ -26,7 +26,7 @@ public class AppTest {
     
     @Test
     public void cr4ckHashFast2() {
-        Assert.assertEquals("abcde", crack.crackAnHashFast(crack.getHash("abcde")));
+        Assert.assertEquals("abcd", crack.crackAnHashFast(crack.getHash("abcd")));
     }
     
     
