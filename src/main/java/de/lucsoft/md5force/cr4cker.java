@@ -57,27 +57,30 @@ public class cr4cker {
         }
         return null;
     }
-    fastAccessArray faa = new fastAccessArray();
-    public String crackAnHashFast(String hash) {
-        for (int e = 0; e < (faa.chars.length); e++) {
-            String g1 = e == 0 ? "": faa.chars[e].toString();
-            for (int e1 = 0; e1 < (faa.chars.length); e1++) {
-                String g2 = e1 == 0 ? "":faa.chars[e1].toString();
-                for (int e2 = 0; e2 < (faa.chars.length); e2++) {
-                    String g3 = e2 == 0 ? "": faa.chars[e2].toString();
-                    for (int e3 = 0; e3 < (faa.chars.length); e3++) {
-                        String g4 = e == 0 ? "": faa.chars[e3].toString();
-                        for (int e4 = 0; e4 < (faa.chars.length); e4++) {
-                            String g5 = e4 == 0 ? "": faa.chars[e4].toString();
-                            
-                            if (getHash(g1 + g2 + g3 + g4 + g5).equals(hash)) {
-                                return g1 + g2 + g3 +g4 +g5;                                
-                            } 
-                        }
-                    }
-                }
-            }
-        }
-        return null;
-    }
+	fastAccessArray faa = new fastAccessArray();
+	public String crackAnHashFast(String hash) {
+		for (final char g1 : this.faa.chars) {
+			for (final char g2 : this.faa.chars) {
+				for (final char g3 : this.faa.chars) {
+					for (final char g4 : this.faa.chars) {
+						final String password = concat(g1, g2, g3, g4);
+						if (getHash(password).equals(hash)) {
+							return password;
+						}
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	private static String concat(char... g) {
+		final StringBuilder result= new StringBuilder();
+		for (final char c:g) {
+			if (c != 0) {
+				result.append(c);
+			}
+		}
+		return result.toString();
+	}
 }
