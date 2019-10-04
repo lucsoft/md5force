@@ -7,9 +7,9 @@ import java.security.MessageDigest;
 /**
  * cr4cker
  */
-public class cr4cker {
+public class Cracker {
 
-    public cr4cker() {
+    public Cracker() {
         
     }
 
@@ -57,7 +57,7 @@ public class cr4cker {
         }
         return null;
     }
-	fastAccessArray faa = new fastAccessArray();
+	FastAccessArray faa = new FastAccessArray();
 	public String crackAnHashFast(String hash) {
 		for (final char g1 : this.faa.chars) {
 			for (final char g2 : this.faa.chars) {
