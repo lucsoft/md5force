@@ -1,9 +1,9 @@
 package de.lucsoft.md5force;
 
 /**
- * fastAccessArray
+ * FastAccessArray
  */
-public class fastAccessArray {
+public class FastAccessArray {
 
     public char[] chars = {
 			(char) 0,
