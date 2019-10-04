@@ -9,7 +9,7 @@ import org.junit.Assert;
  */
 public class AppTest {
     
-    cr4cker crack = new cr4cker();
+    Cracker crack = new Cracker();
     
     @Test
     public void checkHash() {
