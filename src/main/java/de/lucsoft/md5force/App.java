@@ -5,7 +5,7 @@ package de.lucsoft.md5force;
  */
 public final class App {
 
-    static cr4cker crack  = new cr4cker();
+    static Cracker crack  = new Cracker();
     public static void main(String[] args) {
         crack.crackAnHashFast(crack.getHash("lol"));
     }
